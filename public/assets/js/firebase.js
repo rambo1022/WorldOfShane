@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js'
-
+import { getFunctions} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-functions.js";
 // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
 import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js'
 
@@ -23,5 +23,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const functions = getFunctions(app)
 
-export {db,getFirestore}
+export {db,getFirestore,functions}

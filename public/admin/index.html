@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="../../../">
+    <title>Acute Plus | View All Users</title>
+    <meta name="description" content="View all users." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Users - Practice Membership Management" />
+    <meta property="og:url" content="https://practice.acuteplus.app/" />
+    <meta property="og:site_name" content="Practice Membership Management | AcutePlus | Users" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <!--begin::Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <!--end::Fonts-->
+    <!--begin::Page Vendor Stylesheets(used by this page)-->
+    <link href="../../public/admin/assets2/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Page Vendor Stylesheets-->
+    <!--begin::Global Stylesheets Bundle(used by all pages)-->
+    <link href="../../public/admin/assets2/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="../../public/admin/assets2/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Stylesheets Bundle-->
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+
+<body id="kt_body" class="aside-enabled aside-fixed"
+    style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+    <!--begin::Main-->
+    <!--begin::Root-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Page-->
+        <div class="page d-flex flex-row flex-column-fluid">
+            <!--begin::Aside-->
+            <div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true"
+                data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}"
+                data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}"
+                data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+                <!--begin::Brand-->
+                <div class="aside-logo flex-column-auto" id="kt_aside_logo">
+                    <!--begin::Logo-->
+                    <a href="../../public/admin/index.html">
+                        <img alt="Logo" src="https://acuteplus.com/img/acuteplus-logo.svg" class="h-25px logo" />
+                    </a>
+                    <!--end::Logo-->
+                    <!--begin::Aside toggler-->
+                    <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle"
+                        data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
+                        data-kt-toggle-name="aside-minimize">
+                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr079.svg-->
+                        <span class="svg-icon svg-icon-1 rotate-180">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path opacity="0.5"
+                                    d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z"
+                                    fill="black" />
+                                <path
+                                    d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z"
+                                    fill="black" />
+                            </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                    </div>
+                    <!--end::Aside toggler-->
+                </div>
+                <!--end::Brand-->                
+                <!--begin::Aside menu-->
+                <div class="aside-menu flex-column-fluid">
+                    <!--begin::Aside Menu-->
+                    <div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true"
+                        data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto"
+                        data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer"
+                        data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
+                        <!--begin::Menu-->
+                        <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
+                            id="#kt_aside_menu" data-kt-menu="true">
+                            <div class="menu-item">
+                                <div class="menu-content pb-2">
+                                    <span class="menu-section text-muted text-uppercase fs-8 ls-1">Directory</span>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link active" href="../../public/admin/index.html">
+                                    <span class="menu-icon">
+                                        <span class="svg-icon svg-icon-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M11 2.375L2 9.575V20.575C2 21.175 2.4 21.575 3 21.575H9C9.6 21.575 10 21.175 10 20.575V14.575C10 13.975 10.4 13.575 11 13.575H13C13.6 13.575 14 13.975 14 14.575V20.575C14 21.175 14.4 21.575 15 21.575H21C21.6 21.575 22 21.175 22 20.575V9.575L13 2.375C12.4 1.875 11.6 1.875 11 2.375Z"
+                                                    fill="black" />
+                                            </svg></span>
+
+                                    </span>
+                                    <span class="menu-title">Home</span>
+                                </a>
+                            </div>
+                            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                <span class="menu-link">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: assets/media/icons/duotune/communication/com014.svg-->
+                                        <span class="svg-icon svg-icon-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path opacity="0.3"
+                                                    d="M18 22H6C5.4 22 5 21.6 5 21V8C6.6 6.4 7.4 5.6 9 4H15C16.6 5.6 17.4 6.4 19 8V21C19 21.6 18.6 22 18 22ZM12 5.5C11.2 5.5 10.5 6.2 10.5 7C10.5 7.8 11.2 8.5 12 8.5C12.8 8.5 13.5 7.8 13.5 7C13.5 6.2 12.8 5.5 12 5.5Z"
+                                                    fill="currentColor" />
+                                                <path
+                                                    d="M12 7C11.4 7 11 6.6 11 6V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V6C13 6.6 12.6 7 12 7ZM15.1 10.6C15.1 10.5 15.1 10.4 15 10.3C14.9 10.2 14.8 10.2 14.7 10.2C14.6 10.2 14.5 10.2 14.4 10.3C14.3 10.4 14.3 10.5 14.2 10.6L9 19.1C8.9 19.2 8.89999 19.3 8.89999 19.4C8.89999 19.5 8.9 19.6 9 19.7C9.1 19.8 9.2 19.8 9.3 19.8C9.5 19.8 9.6 19.7 9.8 19.5L15 11.1C15 10.8 15.1 10.7 15.1 10.6ZM11 11.6C10.9 11.3 10.8 11.1 10.6 10.8C10.4 10.6 10.2 10.4 10 10.3C9.8 10.2 9.50001 10.1 9.10001 10.1C8.60001 10.1 8.3 10.2 8 10.4C7.7 10.6 7.49999 10.9 7.39999 11.2C7.29999 11.6 7.2 12 7.2 12.6C7.2 13.1 7.3 13.5 7.5 13.9C7.7 14.3 7.9 14.5 8.2 14.7C8.5 14.9 8.8 14.9 9.2 14.9C9.8 14.9 10.3 14.7 10.6 14.3C11 13.9 11.1 13.3 11.1 12.5C11.1 12.3 11.1 11.9 11 11.6ZM9.8 13.8C9.7 14.1 9.5 14.2 9.2 14.2C9 14.2 8.8 14.1 8.7 14C8.6 13.9 8.5 13.7 8.5 13.5C8.5 13.3 8.39999 13 8.39999 12.6C8.39999 12.2 8.4 11.9 8.5 11.7C8.5 11.5 8.6 11.3 8.7 11.2C8.8 11.1 9 11 9.2 11C9.5 11 9.7 11.1 9.8 11.4C9.9 11.7 10 12 10 12.6C10 13.2 9.9 13.6 9.8 13.8ZM16.5 16.1C16.4 15.8 16.3 15.6 16.1 15.4C15.9 15.2 15.7 15 15.5 14.9C15.3 14.8 15 14.7 14.6 14.7C13.9 14.7 13.4 14.9 13.1 15.3C12.8 15.7 12.6 16.3 12.6 17.1C12.6 17.6 12.7 18 12.9 18.4C13.1 18.7 13.3 19 13.6 19.2C13.9 19.4 14.2 19.5 14.6 19.5C15.2 19.5 15.7 19.3 16 18.9C16.4 18.5 16.5 17.9 16.5 17.1C16.7 16.8 16.6 16.4 16.5 16.1ZM15.3 18.4C15.2 18.7 15 18.8 14.7 18.8C14.4 18.8 14.2 18.7 14.1 18.4C14 18.1 13.9 17.7 13.9 17.2C13.9 16.8 13.9 16.5 14 16.3C14.1 16.1 14.1 15.9 14.2 15.8C14.3 15.7 14.5 15.6 14.7 15.6C15 15.6 15.2 15.7 15.3 16C15.4 16.2 15.5 16.6 15.5 17.2C15.5 17.7 15.4 18.1 15.3 18.4Z"
+                                                    fill="currentColor" />
+                                            </svg></span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Music</span>
+                                    <span class="menu-arrow"></span>
+                                </span>
+                                <div class="menu-sub menu-sub-accordion">
+                                    <div class="menu-item">
+                                        <a class="menu-link" href="../../public/admin/song.html">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Manage Songs</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <span class="menu-link">
+                                        <span class="menu-icon">
+                                            <!--begin::Svg Icon | path: /var/www/preview.keenthemes.com/kt-products/docs/metronic/html/releases/2022-09-12-123646/core/html/src/media/icons/duotune/communication/com005.svg-->
+                                            <span class="svg-icon svg-icon-2"><svg width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z"
+                                                        fill="currentColor" />
+                                                    <path opacity="0.3"
+                                                        d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z"
+                                                        fill="currentColor" />
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                        </span>
+                                        <span class="menu-title">Contact Manager</span>
+                                        <span class="menu-arrow"></span>
+                                    </span>
+                                    <div class="menu-sub menu-sub-accordion">
+                                        <div class="menu-item">
+                                            <a class="menu-link" href="../../public/admin/sendMessage.html">
+                                                <span class="menu-bullet">
+                                                    <span class="bullet bullet-dot"></span>
+                                                </span>
+                                                <span class="menu-title">Send Message</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Menu-->
+                    </div>
+                    <!--end::Aside Menu-->
+                </div>
+                <!--end::Aside menu-->
+                <!--begin::Footer-->
+                <div class="aside-footer flex-column-auto pt-5 pb-7 px-5" id="kt_aside_footer">
+                    <a id='signoutBtn' class="btn btn-custom btn-primary w-100">
+                        <span class="btn-label">Sign Out</span>
+                        <!--begin::Svg Icon | path: icons/duotune/general/gen005.svg-->
+
+                        <span class="svg-icon btn-icon svg-icon-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none">
+                                <rect opacity="0.3" x="4" y="11" width="12" height="2" rx="1" fill="black" />
+                                <path
+                                    d="M5.86875 11.6927L7.62435 10.2297C8.09457 9.83785 8.12683 9.12683 7.69401 8.69401C7.3043 8.3043 6.67836 8.28591 6.26643 8.65206L3.34084 11.2526C2.89332 11.6504 2.89332 12.3496 3.34084 12.7474L6.26643 15.3479C6.67836 15.7141 7.3043 15.6957 7.69401 15.306C8.12683 14.8732 8.09458 14.1621 7.62435 13.7703L5.86875 12.3073C5.67684 12.1474 5.67684 11.8526 5.86875 11.6927Z"
+                                    fill="black" />
+                                <path
+                                    d="M8 5V6C8 6.55228 8.44772 7 9 7C9.55228 7 10 6.55228 10 6C10 5.44772 10.4477 5 11 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H11C10.4477 19 10 18.5523 10 18C10 17.4477 9.55228 17 9 17C8.44772 17 8 17.4477 8 18V19C8 20.1046 8.89543 21 10 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H10C8.89543 3 8 3.89543 8 5Z"
+                                    fill="#C4C4C4" />
+                            </svg></span>
+                        <!--end::Svg Icon-->
+                    </a>
+                </div>
+                <!--end::Footer-->
+            </div>
+            <!--end::Aside-->
+            <!--begin::Wrapper-->
+            <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+                <!--begin::Header-->
+                <div id="kt_header" style="" class="header align-items-stretch">
+                    <!--begin::Container-->
+                    <div class="container-fluid d-flex align-items-stretch justify-content-between">
+                        <!--begin::Aside mobile toggle-->
+                        <div class="d-flex align-items-center d-lg-none ms-n3 me-1" title="Show aside menu">
+                            <div class="btn btn-icon btn-active-light-primary w-30px h-30px w-md-40px h-md-40px"
+                                id="kt_aside_mobile_toggle">
+                                <!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
+                                <span class="svg-icon svg-icon-2x mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z"
+                                            fill="black" />
+                                        <path opacity="0.3"
+                                            d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z"
+                                            fill="black" />
+                                    </svg>
+                                </span>
+                                <!--end::Svg Icon-->
+                            </div>
+                        </div>
+                        <!--end::Aside mobile toggle-->
+                        <!--begin::Mobile logo-->
+                        <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+                            <a href="../../public/admin/index.html" class="d-lg-none">
+                                <img alt="Logo" src="assets/media/logos/logo2.png" class="h-30px" />
+                            </a>
+                        </div>
+                        <!--end::Mobile logo-->
+                        <!--begin::Wrapper-->
+                        <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+                            <!--begin::Navbar-->
+                            <div class="d-flex align-items-center" id="kt_header_nav">
+                                <!--begin::Page title-->
+                                <div data-kt-swapper="true" data-kt-swapper-mode="prepend"
+                                    data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_header_nav'}"
+                                    class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                                    <!--begin::Title-->
+                                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Home
+                                        <!--end::Title-->
+                                        <!--begin::Separator-->
+                                        <span class="h-20px border-gray-200 border-start mx-4"></span>
+                                        <!--end::Separator-->
+                                </div>
+                                <!--end::Page title-->
+                            </div>
+                            <!--end::Navbar-->
+                        </div>
+                        <!--end::Wrapper-->
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::Header-->
+                <!--begin::Content-->
+                <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--begin::Toolbar-->
+                    <!--end::Toolbar-->
+                    <!--begin::Post-->
+                    <div class="post d-flex flex-column-fluid" id="kt_post">
+                        <!--begin::Container-->
+                        <div id="kt_content_container" class="container-xxl">
+                            <div class="card" id="">
+                                <div class="card-header border-0 pt-6">
+                                    <!--begin::Card title-->
+                                    <!--begin::Card toolbar-->
+                                    <div class="card-toolbar">
+                                        <!--begin::Toolbar-->
+                                        <div class="d-flex justify-content-end" data-kt-user-table-toolbar="base">
+                                        </div>
+                                        <!--end::Toolbar-->
+                                    </div>
+                                    <!--end::Card toolbar-->
+                                </div>
+                                <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                                    <!--begin::Toolbar-->
+                                    <!--end::Toolbar-->
+                                    <!--begin::Post-->
+                                    <div class="post d-flex flex-column-fluid" id="kt_post">
+                                        <!--begin::Container-->
+                                        <div id="kt_content_container" class="container-xxl">
+                                            <!--begin::Card-->
+                                            <br />
+                                            <div class="row g-5 g-xl-8">
+                                                <!--begin::Col-->
+                                                <div class="col-xl-3">
+                                                    <!--begin::Statistics Widget 5-->
+                                                    <a href="" class="card bg-dark hoverable card-xl-stretch mb-xl-8">
+                                                        <!--begin::Body-->
+                                                        <div class="card-body">
+                                                            <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm008.svg-->
+                                                            <span class="svg-icon svg-icon-white svg-icon-3x ms-n1">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                    viewBox="0 0 24 24" fill="none">
+                                                                    <path opacity="0.3"
+                                                                        d="M18 21.6C16.3 21.6 15 20.3 15 18.6V2.50001C15 2.20001 14.6 1.99996 14.3 2.19996L13 3.59999L11.7 2.3C11.3 1.9 10.7 1.9 10.3 2.3L9 3.59999L7.70001 2.3C7.30001 1.9 6.69999 1.9 6.29999 2.3L5 3.59999L3.70001 2.3C3.50001 2.1 3 2.20001 3 3.50001V18.6C3 20.3 4.3 21.6 6 21.6H18Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M12 12.6H11C10.4 12.6 10 12.2 10 11.6C10 11 10.4 10.6 11 10.6H12C12.6 10.6 13 11 13 11.6C13 12.2 12.6 12.6 12 12.6ZM9 11.6C9 11 8.6 10.6 8 10.6H6C5.4 10.6 5 11 5 11.6C5 12.2 5.4 12.6 6 12.6H8C8.6 12.6 9 12.2 9 11.6ZM9 7.59998C9 6.99998 8.6 6.59998 8 6.59998H6C5.4 6.59998 5 6.99998 5 7.59998C5 8.19998 5.4 8.59998 6 8.59998H8C8.6 8.59998 9 8.19998 9 7.59998ZM13 7.59998C13 6.99998 12.6 6.59998 12 6.59998H11C10.4 6.59998 10 6.99998 10 7.59998C10 8.19998 10.4 8.59998 11 8.59998H12C12.6 8.59998 13 8.19998 13 7.59998ZM13 15.6C13 15 12.6 14.6 12 14.6H10C9.4 14.6 9 15 9 15.6C9 16.2 9.4 16.6 10 16.6H12C12.6 16.6 13 16.2 13 15.6Z"
+                                                                        fill="black" />
+                                                                    <path
+                                                                        d="M15 18.6C15 20.3 16.3 21.6 18 21.6C19.7 21.6 21 20.3 21 18.6V12.5C21 12.2 20.6 12 20.3 12.2L19 13.6L17.7 12.3C17.3 11.9 16.7 11.9 16.3 12.3L15 13.6V18.6Z"
+                                                                        fill="black" />
+                                                                </svg>
+                                                            </span>
+                                                            <!--end::Svg Icon-->
+                                                            <div id='numberOfCustomers'
+                                                                class="text-inverse-dark fw-bolder fs-2 mb-2 mt-5">
+                                                                <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                                            </div>
+                                                            <div class="fw-bold text-inverse-dark fs-7">Contacts</div>
+                                                        </div>
+                                                        <!--end::Body-->
+                                                    </a>
+                                                    <!--end::Statistics Widget 5-->
+                                                </div>
+                                                <div class="col-xl-9">
+                                                    <!--begin::Mixed Widget 10-->
+                                                    <div class="card card-xl-stretch mb-5 mb-xl-8">
+                                                        <!--begin::Body-->
+                                                        <div
+                                                            class="card-body p-0 d-flex justify-content-between flex-column overflow-hidden">
+                                                            <!--begin::Hidden-->
+                                                            <div class="d-flex flex-stack flex-wrap flex-grow-1 px-9 pt-9 pb-3">
+                                                                <div class="me-2">
+                                                                    <span class="fw-bolder text-gray-800 d-block fs-3">Monthly
+                                                                        Visits</span>
+                                                                    <span id='currentMonthYear' class="text-gray-400 fw-bold"></span>
+                                                                </div>
+                                                                <div id='monthlyVisits' class="fw-bolder fs-3 text-primary"></div>
+                                                            </div>
+                                                            <!--end::Hidden-->
+                                                            <!--begin::Chart-->
+                                                            <div class="mixed-widget-10-chart" data-kt-color="primary"
+                                                                style="height: 200px"></div>
+                                                            <!--end::Chart-->
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Mixed Widget 10-->
+                                                </div>
+                                                <!--end::Col-->
+                                                <div class="col-xl-9">
+                                                    <!--begin::Mixed Widget 10-->
+                                                    <div class="card card-xl-stretch mb-5 mb-xl-8">
+                                                        <!--begin::Body-->
+                                                        <div
+                                                            class="card-body p-0 d-flex justify-content-between flex-column overflow-hidden">
+                                                            <!--begin::Hidden-->
+                                                            <div class="d-flex flex-stack flex-wrap flex-grow-1 px-9 pt-9 pb-3">
+                                                                <div class="me-2">
+                                                                    <span class="fw-bolder text-gray-800 d-block fs-3">Most Played Song</span>
+                                                                    <span id='currentMonthYear' class="text-gray-400 fw-bold"></span>
+                                                                </div>
+                                                                <div id='monthlyVisits' class="fw-bolder fs-3 text-primary"></div>
+                                                            </div>
+                                                            <!--end::Hidden-->
+                                                            <!--begin::Chart-->
+                                                            <div class="mixed-widget-10-chart" data-kt-color="primary"
+                                                                style="height: 200px"></div>
+                                                            <!--end::Chart-->
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Mixed Widget 10-->
+                                                </div>
+                                                <!--end::Col-->
+                                            </div>
+                                            <!--end::Card-->
+                                        </div>
+                                        <!--end::Container-->
+                                    </div>
+                                    <!--end::Post-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Container-->
+                    </div>
+                    <!--end::Post-->
+                </div>
+                <!--end::Content-->
+                <!--begin::Footer-->
+                <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+                    <!--begin::Container-->
+                    <div
+                        class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+                        <!--begin::Copyright-->
+                        <div class="text-dark order-2 order-md-1">
+                            <span class="text-muted fw-bold me-1">2022©</span>
+                            <a href="https://acuteplus.com" target="_blank"
+                                class="text-gray-800 text-hover-primary">AcutePlus</a>
+                        </div>
+                        <!--end::Copyright-->
+                        <!--begin::Menu-->
+                        <ul class="menu menu-gray-600 menu-hover-primary fw-bold order-1">
+                            <li class="menu-item">
+                                <a href="https://acuteplus.com/contact/" target="_blank"
+                                    class="menu-link px-2">Support</a>
+                            </li>
+                        </ul>
+                        <!--end::Menu-->
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::Footer-->
+            </div>
+            <!--end::Wrapper-->
+        </div>
+
+        <!--end::Page-->
+    </div>
+    <!--end::Modal - Upgrade plan-->
+    <!--end::Modals-->
+    <!--begin::Scrolltop-->
+    <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+        <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+        <span class="svg-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)"
+                    fill="black" />
+                <path
+                    d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
+                    fill="black" />
+            </svg>
+        </span>
+        <!--end::Svg Icon-->
+    </div>
+    <!--begin::Modal-->
+    <div class="modal fade" id="userModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="userModalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end::Modal-->
+    <!--begin::Modal-->
+    <div class="modal fade" id="createUserModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createUserModalTitle">Create User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="createUserModalBody">
+                    <form>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input class="form-control" id="createUserName" placeholder="Enter user's name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" id="createUserEmail" placeholder="Enter email"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" id="createUserPassword" placeholder="Password"
+                                required>
+                        </div>
+                        <div class="col-auto my-1">
+                            <label class="my-1 mr-2" for="createUserModalBody">Practice </label>
+                            <select class="form-select" id="createUserPracticeId" required> </select>
+                        </div>
+                        <div>
+                            <button type="button" id="submitCreateInternalUser" class="btn btn-primary">Save</button>
+                        </div>
+                        <div class="text-danger" id="errorMsg"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end::Modal-->
+    <!--end::Scrolltop-->
+    <!--end::Main-->
+    <!--begin::Javascript-->
+    <!--begin::Global Javascript Bundle(used by all pages)-->
+    <script src="../../public/admin/assets2/plugins/global/plugins.bundle.js"></script>
+    <script src="../../public/admin/assets2/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--begin::Page Vendors Javascript(used by this page)-->
+    <script src="../../public/admin/assets2/plugins/custom/datatables/datatables.bundle.js"></script>
+    <script src="../../public/lib/repeater.js"></script>
+    <!--end::Page Vendors Javascript-->
+    <!--begin::Page Custom Javascript(used by this page)-->
+    <!--end::Page Custom Javascript-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script type="module" src="../../public/admin/js/app.js"></script>
+    <!--end::Javascript-->
+</body>
+<!--end::Body-->
