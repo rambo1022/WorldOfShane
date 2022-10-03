@@ -1,4 +1,3 @@
-import { getAuth, signInWithCredential, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 
 const functions = require("firebase-functions");
 const accountSid = 'AC492a6defb12e8b5500eeb1a8c66c533d';

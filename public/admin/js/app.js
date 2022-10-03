@@ -29,5 +29,31 @@ $(document).ready(async function () {
     });
 });
 
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    //use this object to construct a generated chart 
+    data: {
+        labels: ['October'],
+        datasets: [{
+            label: 'Visits',
+            data: [12],
+            backgroundColor: [
+                'rgba(54, 162, 235)',
+            ],
+            borderColor: [
+                'rgba(54, 162, 235)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: false
+            }
+        }
+    }
+});
 
 

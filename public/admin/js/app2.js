@@ -32,6 +32,10 @@ $(document).ready(async function () {
                 console.log(result)
             });
     });
+    $(document.body).on('click', '#closeModal', async function () {
+        console.log('yo')
+        $('#musicModal').modal('hide')
+    });
 });
 async function loadCards() {
     //Resets the Rows that will contain the cards
@@ -94,3 +98,8 @@ async function removeCard(uid) {
     loadCards()
 
 }
+
+
+
+
+

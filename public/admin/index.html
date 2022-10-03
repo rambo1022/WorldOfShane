@@ -21,6 +21,7 @@
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
     <link href="../../public/admin/assets2/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="../../public/admin/assets2/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <script src="https://www.jsdelivr.com/package/npm/chart.js"></script>
     <!--end::Global Stylesheets Bundle-->
 </head>
 <!--end::Head-->
@@ -101,7 +102,7 @@
                                         <!--begin::Svg Icon | path: assets/media/icons/duotune/communication/com014.svg-->
                                         <span class="svg-icon svg-icon-2"><svg xmlns="http://www.w3.org/2000/svg"
                                                 width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                <path opacity="0.3"
+                                                <path opacity="0.8"
                                                     d="M18 22H6C5.4 22 5 21.6 5 21V8C6.6 6.4 7.4 5.6 9 4H15C16.6 5.6 17.4 6.4 19 8V21C19 21.6 18.6 22 18 22ZM12 5.5C11.2 5.5 10.5 6.2 10.5 7C10.5 7.8 11.2 8.5 12 8.5C12.8 8.5 13.5 7.8 13.5 7C13.5 6.2 12.8 5.5 12 5.5Z"
                                                     fill="currentColor" />
                                                 <path
@@ -314,12 +315,15 @@
                                                                         Visits</span>
                                                                     <span id='currentMonthYear' class="text-gray-400 fw-bold"></span>
                                                                 </div>
-                                                                <div id='monthlyVisits' class="fw-bolder fs-3 text-primary"></div>
+                                                                
+                                                                <div id='monthlyVisits' class="fw-bolder fs-3 text-primary">
+                                                                    
+                                                                </div>
+                                                                
                                                             </div>
                                                             <!--end::Hidden-->
                                                             <!--begin::Chart-->
-                                                            <div class="mixed-widget-10-chart" data-kt-color="primary"
-                                                                style="height: 200px"></div>
+                                                            <canvas id="myChart" width="5%" height="5%"></canvas>
                                                             <!--end::Chart-->
                                                         </div>
                                                     </div>
@@ -421,7 +425,7 @@
                 <div class="modal-body" id="userModalBody">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary"  data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -481,6 +485,7 @@
     <!--end::Page Custom Javascript-->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js"></script>
     <script type="module" src="../../public/admin/js/app.js"></script>
     <!--end::Javascript-->
 </body>

@@ -2,7 +2,7 @@ import { db,functions } from "./firebase.js"
 import { collection, getDocs, addDoc, doc, deleteDoc } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js';
 import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-functions.js";
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js';
-
+import { getAnalytics, logEvent } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js'
 
 $(document).ready(async function () {
     loadCards();
@@ -95,3 +95,7 @@ async function removeCard(uid) {
     loadCards()
 
 }
+
+//
+const analytics = getAnalytics()
+logEvent(analytics, 'goal_completion', { name: 'lever_puzzle'});
