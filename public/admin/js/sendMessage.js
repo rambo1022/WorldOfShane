@@ -20,12 +20,10 @@ $(document).ready(async function () {
         const authToken = '7b667d33fa6fe5e724806fc151bb76bf';
         const client = require('twilio')(accountSid, authToken);
 
-        client.messages
-            .create({
-                to: '+15614022851'
-            })
-            .then(message => console.log(message.sid))
-            .done();
+        admin.firestore().collection('messages').add({
+            to: '+15551234567',
+            body: 'Hello from Firebase!'
+          });
     });
 });
 
