@@ -82,7 +82,7 @@ async function loadCards() {
             size = "width: 36rem";
             const htmlstring = `
             <div class="col-6 mx-auto">
-            <div class="card" style="${size}">
+            <div class="card" style="}">
             <div class="card-body">
             ${link}
             </div>
@@ -96,7 +96,7 @@ async function loadCards() {
             size = ""
             const htmlstring = `
             <div class="col-12 mx-auto" >
-            <div class="card" style="${size}">
+            <div class="card" style="">
             <div class="card-body">
             ${link}
             </div>
