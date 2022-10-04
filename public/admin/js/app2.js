@@ -12,10 +12,16 @@ $(document).ready(async function () {
     $(document.body).on('click', '#addMusicBtn', async function () {
         const link = $('#musicLink').val()
         const size = $('#musicModalSize').val()
-        try {
+        const apple = $('#appleMusicLink').val()
+        const youtube = $('#youtubeMusicLink').val()
+        try { 
             const docRef = await addDoc(collection(db, "Music"), {
                 Link: link,
-                Size: size
+                Size: size,
+                Platforms:{
+                    Apple: apple || null,
+                    Youtube: youtube || null
+                }
             });
             loadCards()
         } catch (e) {
@@ -47,6 +53,10 @@ async function loadCards() {
     querySnapshot.forEach((doc) => {
         const link = doc.data().Link
         let size = doc.data().Size
+        if(doc.data().Platforms){
+            const apple = doc.data().Platforms.Apple 
+            const youtube = doc.data().Platforms.Youtube 
+        }   
         if (size === "Small") {
             size = "width: 24rem;"
             const htmlstring = ` 
@@ -54,6 +64,13 @@ async function loadCards() {
             <div class="card" id="sizeSmall" style="${size}">
             <div class="card-body">
             ${link}
+            <div class="d-flex flex-row bd-highlight mb-3">
+                <div class="row">
+                    <img src="../../../public/admin/assets2/css/youtubeIcon.webp" height="50px" width="50px"> <img src="../../../public/admin/assets2/css/youtube.png" height="50px" width="50px">
+                    
+                </div>
+            </div>
+            <span></span>
             </div>
             <div class="col-sm">
                 <button type="button" style="float:right;" data-uid=${doc.id} id="removeMusicBtn" class="btn btn-dark">Remove</button>

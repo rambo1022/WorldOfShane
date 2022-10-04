@@ -43,7 +43,8 @@
                 <div class="aside-logo flex-column-auto" id="kt_aside_logo">
                     <!--begin::Logo-->
                     <a href="../../public/admin/index.html">
-                        <img alt="Logo" src="../admin/assets2/css/World of Shane Logo Resized.png" class="h-25px logo" />
+                        <img alt="Logo" src="../admin/assets2/css/World of Shane Logo Resized.png"
+                            class="h-25px logo" />
                     </a>
                     <!--end::Logo-->
                     <!--begin::Aside toggler-->
@@ -129,7 +130,8 @@
                                     <span class="menu-link">
                                         <span class="menu-icon">
                                             <!--begin::Svg Icon | path: /var/www/preview.keenthemes.com/kt-products/docs/metronic/html/releases/2022-09-12-123646/core/html/src/media/icons/duotune/communication/com005.svg-->
-                                            <img src="../../public/admin/assets2/css/musical-note-music-player-svgrepo-com.svg" style="width:20px;height: 20px;opacity: 0.8;" >
+                                            <img src="../../public/admin/assets2/css/musical-note-music-player-svgrepo-com.svg"
+                                                style="width:20px;height: 20px;opacity: 0.8;">
                                             <!--end::Svg Icon-->
                                         </span>
                                         <span class="menu-title">Contact Manager</span>
@@ -275,32 +277,34 @@
                                     <table class="table table-hover align-middle table-row-dashed fs-6 gy-5"
                                         id="kt_table_users">
                                         <!--begin::Table head-->
-                                        <h1>Songs</h1>
+                                        <div class="row d-inline-flex p-2 bd-highlight">
+                                            <h1>Songs</h1>
+                                        <button type="button" style="float:right;" id="openMusicModal"
+                                            class="btn btn-dark">Add
+                                            Music</button>
+                                        </div>
+                                        
                                         <!--end::Table head-->
                                         <!--begin::Table body-->
-                                    <tbody>
-                                            <div>
-                                                <div>
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col-sm">
-                                                                <div class="form-group">
-                                                                    <button type="button" style="float:right;"
-                                                                        id="openMusicModal" class="btn btn-dark">Add
-                                                                        Music</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row" id="insertLinkLarge">
-                                                        </div>
-                                                        <div class="row" id="insertLinkMedium">
-                                                        </div>
-                                                        <div class="row" id="insertLinkSmall">
-                                                        </div>
-                                                    </div>
+                                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                                            <div class="col">
+                                                <div class="card" id="insertLinkLarge">
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                                            <div class="col">
+                                                <div class="card" id="insertLinkMedium">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                                            <div class="col">
+                                                <div class="card" id="insertLinkSmall">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
                                 <div class="modal fade" id="musicModal" tabindex="-1" role="dialog">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
@@ -310,9 +314,19 @@
                                             <div class="modal-body">
                                                 <form>
                                                     <div class="form-group">
-                                                        <label for="exampleInputEmail1">Insert Link Here buddy</label>
+                                                        <label for="exampleInputEmail1">Insert Link from
+                                                            Spotify->Song->Share->Embed->Copy Code</label>
                                                         <input type="text" class="form-control" id="musicLink"
-                                                            placeholder="Link">
+                                                            placeholder="Spotify Embedment Link">
+                                                    </div>
+                                                    <div class="col-auto my-1">
+                                                        <label class="my-1 mr-2" for="createUserModalBody">Add other
+                                                            platforms
+                                                        </label>
+                                                        <input type="text" class="form-control" id="appleMusicLink"
+                                                            placeholder="Apple Music Link">
+                                                        <input type="text" class="form-control" id="youtubeMusicLink"
+                                                            placeholder="Youtube Music Link">
                                                     </div>
                                                     <div class="col-auto my-1">
                                                         <label class="my-1 mr-2" for="createUserModalBody">Select Size
@@ -334,7 +348,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                </tbody>
+
                                 <!--end::Table body-->
                                 </table>
                                 <!--end::Table-->
