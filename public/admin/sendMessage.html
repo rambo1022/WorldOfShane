@@ -257,6 +257,25 @@
                                 </div>
                                 <div class="card-body pt-0">
                                     <!--begin::Table-->
+                                    <form>
+                                        <div class="col-auto my-1">
+                                            <label class="my-1 mr-2" for="sendMessageSelector">Send to:
+                                            </label>
+                                            <select class="form-select" id="sendMessageSelector" required>
+                                                <option value="All">All </option>
+                                                <option value="Random">Random 100 </option>
+                                                <option id="specificValue"value="Specific">Specific Amount </option>
+                                            </select>
+                                            <div id="specificAmount">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Create Message</label>
+                                            <textarea class="form-control" rows="5" id="messageText"></textarea>
+                                        </div> 
+                                        <button type="button" style="float:right;"class="btn btn-primary" id="sendTextMessage">Send</button>
+                                    </form>
                                     <!--end::Table-->
                                 </div>
                             </div>
@@ -382,7 +401,7 @@
     <!--end::Page Custom Javascript-->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    <script type="module" src="../../public/admin/js/app.js"></script>
+    <script type="module" src="../../public/admin/js/sendMessage.js"></script>
     <!--end::Javascript-->
 </body>
 <!--end::Body-->
