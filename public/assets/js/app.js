@@ -1,12 +1,13 @@
-import { db,functions } from "./firebase.js"
+import { db } from "./firebase.js"
 import { collection, getDocs, addDoc, doc, deleteDoc } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js';
 import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-functions.js";
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js';
 import { getAnalytics, logEvent } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js'
 
+
 $(document).ready(async function () {
     loadCards();
-
+    const functions = getFunctions()
     $(document.body).on('click', '#openMusicModal', async function () {
         $('#musicModal').modal('show')
     });
@@ -27,11 +28,13 @@ $(document).ready(async function () {
         const uid = $(this).data('uid')
         removeCard(uid)
     });
-    $(document.body).on('click', '#sendMsgBtn', async function () {
+    $(document.body).on('click', '#sendMsg', async function () {
+        const text = $('#messageText').val()
+        const phone = $('#phone').val()
         const sendMsgCallable = httpsCallable(functions, 'sendMsg');
-        await sendMsgCallable({text:"text"}).then((result) => {
-                console.log(result)
-            });
+        sendMsgCallable({ text: text, phone: phone }).then((result) => {
+            console.log(result)
+        });
     });
 });
 async function loadCards() {
@@ -48,7 +51,7 @@ async function loadCards() {
             size = "width: 18rem;"
             const htmlstring = `
             <div class="col-4 mx-auto" >
-            <div class="card" id="sizeSmall" style="${size}">
+            <div class="card" id="sizeSmall">
             <div class="card-body">
             ${link}
             </div>
@@ -62,12 +65,9 @@ async function loadCards() {
             size = "width: 36rem";
             const htmlstring = `
             <div class="col-6 mx-auto" >
-            <div class="card" style="${size}">
+            <div class="card">
             <div class="card-body">
             ${link}
-            </div>
-            <div class="col-sm">
-                <button type="button" style="float:right;" data-uid=${doc.id} id="removeMusicBtn" class="btn btn-dark">Remove</button>
             </div>
             </div>
             </div>`
@@ -76,7 +76,7 @@ async function loadCards() {
             size = ""
             const htmlstring = `
             <div class="col-12 mx-auto" >
-            <div class="card" style="${size}">
+            <div class="card">
             <div class="card-body">
             ${link}
             </div>
@@ -96,6 +96,3 @@ async function removeCard(uid) {
 
 }
 
-//
-const analytics = getAnalytics()
-logEvent(analytics, 'goal_completion', { name: 'lever_puzzle'});

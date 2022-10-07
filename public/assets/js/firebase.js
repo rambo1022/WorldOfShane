@@ -25,4 +25,4 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const functions = getFunctions(app)
 const analytics = getAnalytics(app)
-export {db,getFirestore,functions,analytics}
+export {db,getFirestore,functions}
