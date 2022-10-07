@@ -34,7 +34,7 @@ $(document).ready(async function () {
     });
     $(document.body).on('click', '#sendMsgBtn', async function () {
         const sendMsgCallable = httpsCallable(functions, 'sendMsg');
-        await sendMsgCallable({text:"text"}).then((result) => {
+        await sendMsgCallable().then((result) => {
                 console.log(result)
             });
     });
